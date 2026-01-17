@@ -919,14 +919,14 @@ function ISChat:onCommandEntered()
             elseif ISChat.instance.rpLanguage == nil then
                 ISChat.instance.rpLanguage = "Empty Slot"
             end
-            local combined = ISChat.instance.whisperIdentifier .. ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. "���� " .. verb .. "\"" .. command .. punctuation .. "\""
+            local combined = ISChat.instance.whisperIdentifier .. ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. " " .. verb .. "\"" .. command .. punctuation .. "\""
             processSayMessage(combined)
             -- .
         elseif chatStreamName == "whisperme" then
             local mePlayer = getPlayer();
             mecurrenttime = getGameTime():getHour();
             mecooldown = mecooldown or 0;
-            local combined = ISChat.instance.whisperIdentifier ..ISChat.instance.rpColor .. " �**" .. ISChat.instance.rpName .. "��� " .. command
+            local combined = ISChat.instance.whisperIdentifier ..ISChat.instance.rpColor .. " **" .. ISChat.instance.rpName .. " " .. command
             command = combined;
             processSayMessage(command);
             if getSandboxVar("ToggleEmoteBuff", true) then
@@ -1023,10 +1023,10 @@ function ISChat:onCommandEntered()
                 ISChat.instance.rpLanguage = "Empty Slot"
             end
 
-            local combined = ISChat.instance.lowIdentifier .. ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. "���� " .. verb .. "\"" .. command .. punctuation .. "\""
+            local combined = ISChat.instance.lowIdentifier .. ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. " " .. verb .. "\"" .. command .. punctuation .. "\""
             if isAdmin() then
                 if modData['_hammer'] ~= "off" then
-                    combined = ISChat.instance.lowIdentifier .. ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. "���� " .. verb .. "\"" .. command .. punctuation .. "\""
+                    combined = ISChat.instance.lowIdentifier .. ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. " " .. verb .. "\"" .. command .. punctuation .. "\""
                 end
             end
             command = combined;
@@ -1035,7 +1035,7 @@ function ISChat:onCommandEntered()
             local mePlayer = getPlayer();
             mecurrenttime = getGameTime():getHour();
             mecooldown = mecooldown or 0;
-            local combined = ISChat.instance.lowIdentifier ..ISChat.instance.rpColor .. " �**" .. ISChat.instance.rpName .. "��� " .. command
+            local combined = ISChat.instance.lowIdentifier ..ISChat.instance.rpColor .. " **" .. ISChat.instance.rpName .. " " .. command
             command = combined;
             processSayMessage(command);
             if getSandboxVar("ToggleEmoteBuff", true) then
@@ -1057,7 +1057,7 @@ function ISChat:onCommandEntered()
             local mePlayer = getPlayer();
             mecurrenttime = getGameTime():getHour();
             mecooldown = mecooldown or 0;
-            local combined = ISChat.instance.longIdentifier .. ISChat.instance.rpColor .. " �**" .. ISChat.instance.rpName .. "��� " .. command;
+            local combined = ISChat.instance.longIdentifier .. ISChat.instance.rpColor .. " **" .. ISChat.instance.rpName .. " " .. command;
             command = combined;
             processSayMessage(command);
             if getSandboxVar("ToggleEmoteBuff", true) then
@@ -1090,23 +1090,23 @@ function ISChat:onCommandEntered()
                 ISChat.instance.rpLanguage = "Empty Slot"
             end
 
-            local combined = ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. "���� " .. verb .. "\"" .. command .. punctuation .. "\"" .. ISChat.instance.sayIdentifier
+            local combined = ISChat.checkLanguageActive() .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. " " .. verb .. "\"" .. command .. punctuation .. "\"" .. ISChat.instance.sayIdentifier
             if isAdmin() then
                 if modData['_hammer'] ~= "off" then
-                    combined = ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. "���� " .. verb .. "\"" .. command .. punctuation .. "\"" .. ISChat.instance.sayIdentifier
+                    combined = ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. " " .. verb .. "\"" .. command .. punctuation .. "\"" .. ISChat.instance.sayIdentifier
                 end
             end
             command = combined;
             processSayMessage(command);
         -- .
         -- emotes for rp
-        -- we use the unicode character � as it does not pass through in zomboid and remains invisible. this, so that the regex in use with the *color* system does not eat our important spacing.
+        -- we use the unicode character  as it does not pass through in zomboid and remains invisible. this, so that the regex in use with the *color* system does not eat our important spacing.
         -- try for yourself using *color* instead of this unicode system to see what i mean; you have dialogue in quotes colored but smashed right up against the rest of the emote.
         elseif chatStreamName == "me" then
             local mePlayer = getPlayer();
             mecurrenttime = getGameTime():getHour();
             mecooldown = mecooldown or 0;
-            local combined = ISChat.instance.rpColor .. ISChat.instance.meIdentifier .. ISChat.instance.rpName .. "��� " .. command;
+            local combined = ISChat.instance.rpColor .. ISChat.instance.meIdentifier .. ISChat.instance.rpName .. " " .. command;
             command = combined;
             processSayMessage(command);
             if getSandboxVar("ToggleEmoteBuff", true) then
@@ -1125,15 +1125,15 @@ function ISChat:onCommandEntered()
             end
         -- .
         elseif chatStreamName == "do" then
-            local combined = ISChat.instance.rpColor .. "��� " .. " �**" ..  " " .. command;
+            local combined = ISChat.instance.rpColor .. " " .. " **" ..  " " .. command;
             command = combined;
             processSayMessage(command);
         elseif chatStreamName == "dolong" then
-            local combined = ISChat.instance.longIdentifier .. ISChat.instance.rpColor .. "��� " .. " �**" ..  " " .. command;
+            local combined = ISChat.instance.longIdentifier .. ISChat.instance.rpColor .. " " .. " **" ..  " " .. command;
             command = combined;
             processSayMessage(command);
         elseif chatStreamName == "dolow" then
-            local combined = ISChat.instance.lowIdentifier .. ISChat.instance.rpColor .. "��� " .. " �**" ..  " " .. command;
+            local combined = ISChat.instance.lowIdentifier .. ISChat.instance.rpColor .. " " .. " **" ..  " " .. command;
             command = combined;
             processSayMessage(command);
 
@@ -1170,7 +1170,7 @@ function ISChat:onCommandEntered()
             local combined = "*teal*" .. ISChat.instance.rpName .. ": ((" .. command .. " ))";
             if isAdmin() then
                 if modData['_hammer'] ~= "off" then
-                    combined = ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " ��" .. ISChat.instance.rpName .. ": *teal*".. " ((" .. command .. " ))";
+                    combined = ISChat.instance.hammer .. "(Admin) " .. ISChat.instance.rpColor .. " " .. ISChat.instance.rpName .. ": *teal*".. " ((" .. command .. " ))";
                 end
             end
             command = combined;
@@ -1454,10 +1454,10 @@ ISChat.addLineInChat = function(message, tabID)
         if not norange then
             if string.match(line, "%[Low%]") then
                 messageRange = getSandboxVar("lowRange", 4)
-            elseif string.match(line, ISChat.instance.meIdentifier)
-                        and not string.match(line, "%[Long%]")
-                        and not string.match(line, "%[Low%]")
-                        and not string.match(line, "%[Whisper%]") then
+            elseif string.find(line, " **", 1, true)
+                        and not string.find(line, "[Long]", 1, true)
+                        and not string.find(line, "[Low]", 1, true)
+                        and not string.find(line, "[Whisper]", 1, true) then
                 messageRange = getSandboxVar("meRange", 20)
             elseif string.match(line, "%[Whisper%]") then
                 messageRange = getSandboxVar("whisperRange", 2)
@@ -1485,22 +1485,10 @@ ISChat.addLineInChat = function(message, tabID)
             print("message from \'"..message:getAuthor().."\' was rangeless")
         end
     end
-    -- find our invisible unicode patterns and replace them. if zomboid's above head chat bubbles parsed the strings like the chat box did, i wouldnt need these.
-    -- unicode characters are invisible, and therefore, do not show up above the head and i need no further code to scrub them out because my god half of this chat mod is working around basegame chat quirks
-    -- if you are reading this aiteron please pull all the chat commands including the message object into proper lua globals so i dont have to do cringe worthy unicode tagging like below
-    if string.match(line, "���� ") then -- say chat
-        line = line:gsub("���� ", "� �� "..ISChat.instance.sayColor)
-    end
-    if string.match(line, "��� ") then -- emotes
-        line = line:gsub("��� ", "� �� "..ISChat.instance.rpEmoteColor)
-    end
-    if string.match(line, "%(%( Faction OOC %)%)� ") then -- guess
-        line = line:gsub("%(%( Faction OOC %)%)� ", ISChat.instance.rpfoocColor.." �%(%( Faction OOC %)%)� ")
-    end
-
-    if string.match(line, " �**") then --find our emote identifiers
-        line = line:gsub(' \"', '� '..ISChat.instance.sayColor..' ��� \"')
-        line = line:gsub('\" ', '\"� �� '..ISChat.instance.rpEmoteColor)
+    -- Color formatting is now applied directly during message construction
+    -- The old Unicode marker system was removed due to encoding issues
+    if string.find(line, "%(%(  Faction OOC  %)%)", 1, false) then
+        line = line:gsub("%(%( Faction OOC %)%)", ISChat.instance.rpfoocColor.." (( Faction OOC ))")
     end
 
     if getPlayer() ~= playerAuthor and not isAdmin() then
@@ -1631,28 +1619,28 @@ ISChat.parseLineLanguage = function(line, sourceLanguage, message)
             secondWord = secondWord:gsub("(%<.+%>)", "")
             secondWord = secondWord:gsub("%p","")
             if string.match(randomWord, secondWord) then
-                randomWord = "... ".."�� ��"..ISChat.sayColor.." \""..randomWord.."\""
+                randomWord = "... ".." "..ISChat.sayColor.." \""..randomWord.."\""
             else
-                randomWord = "... ".."�� ��"..ISChat.sayColor.." \""..randomWord.." ... "..secondWord.."\""
+                randomWord = "... ".." "..ISChat.sayColor.." \""..randomWord.." ... "..secondWord.."\""
             end
             
         else
-            randomWord = "... ".."�� ��"..ISChat.sayColor.." \""..randomWord.."\""
+            randomWord = "... ".." "..ISChat.sayColor.." \""..randomWord.."\""
         end
     end
     if randomWord == "\" \""  or randomWord == "\"\"" then randomWord = " "; end
-    local verb = " says something in "..sourceLanguage.."�� ��"..randomWord
+    local verb = " says something in "..sourceLanguage.." "..randomWord
     local verbPool = {" seems ", " appears "," tries "}
     if string.match(line, "%!") then
         if ZombRand(1,5) >= 3 then
-            verb = " raises their voice, speaking emphatically in "..sourceLanguage.."�� ��"..randomWord
+            verb = " raises their voice, speaking emphatically in "..sourceLanguage.." "..randomWord
         else
             verb = " calls out in "..sourceLanguage..", their voice louder than normal."
         end
     elseif string.match(line, "%?") then
-        verb = verbPool[ZombRand(1,math.max(1,#verbPool+1))].."to ask a question in "..sourceLanguage.."�� ��"..randomWord
+        verb = verbPool[ZombRand(1,math.max(1,#verbPool+1))].."to ask a question in "..sourceLanguage.." "..randomWord
     elseif string.len(line) <= 80 then
-        verb = verbPool[ZombRand(1,math.max(1,#verbPool+1))].."to state something in "..sourceLanguage.."�� ��"..randomWord
+        verb = verbPool[ZombRand(1,math.max(1,#verbPool+1))].."to state something in "..sourceLanguage.." "..randomWord
     end
     local player = getPlayerFromUsername(message:getAuthor())
     line = ISChat.instance.rpEmoteColor .. get_rpname_specific(player) .. verb
