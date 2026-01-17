@@ -69,12 +69,12 @@ ISChat.rpColorB = 128 / 255
 ISChat.emoteR = 128 / 255
 ISChat.emoteG = 0 / 255
 ISChat.emoteB = 128 / 255
-ISChat.sayIdentifier = "� �"
-ISChat.meIdentifier = " �**"
-ISChat.whisperIdentifier = "[Whisper] �"
-ISChat.lowIdentifier = "[Low] �"
-ISChat.longIdentifier = "[Long] �"
-ISChat.shoutIdentifier = "��� �"
+ISChat.sayIdentifier = ""
+ISChat.meIdentifier = " **"
+ISChat.whisperIdentifier = "[Whisper] "
+ISChat.lowIdentifier = "[Low] "
+ISChat.longIdentifier = "[Long] "
+ISChat.shoutIdentifier = ""
 ISChat.sayR = 177 / 255
 ISChat.sayG = 210 / 255
 ISChat.sayB = 187 / 255
@@ -87,7 +87,7 @@ ISChat.rpfoocColor = "<RGB:"..ISChat.foocR..","..ISChat.foocG..","..ISChat.foocB
 ISChat.rpLanguage = "Empty Slot"
 ISChat.rpLanguage1 = "Empty Slot"
 ISChat.rpLanguage2 = "Empty Slot"
-ISChat.hammer = "��*hammer*��"
+ISChat.hammer = "*hammer*"
 -- B42 Safe SandboxVars access with fallbacks
 -- Uses ~= nil check to properly handle false/zero values
 local function getSandboxVar(varName, default)
@@ -131,12 +131,12 @@ function ISChat:initialise()
     self.rpLanguage = "Empty Slot"
     self.rpLanguage1 = modData['rpLanguage1'] or ISChat.instance.rpLanguage1
     self.rpLanguage2 = modData['rpLanguage2'] or ISChat.instance.rpLanguage2
-    self.hammer = "��*hammer*��"
+    self.hammer = "*hammer*"
     self.retainCommand = modData['_retainCommand'] or ISChat.instance.retainCommand
     self.disableSigns = false
     if isAdmin() then
         modData['_hammer'] = modData['_hammer'] or "on"
-        ISChat.instance.hammer = "��*hammer*��"
+        ISChat.instance.hammer = "*hammer*"
     end
     if modData['rpEmoteColor'] == nil then
         modData['rpEmoteColor'] = ISChat.instance.rpEmoteColor --/me, /do
