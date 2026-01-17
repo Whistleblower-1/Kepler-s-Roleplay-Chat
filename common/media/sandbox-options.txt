@@ -1,0 +1,62 @@
+VERSION = 1,
+
+option RoleplayChat.ToggleOOC
+{
+	type = boolean, default = false,
+	page = RoleplayChat, translation = ToggleOOC,
+}
+option RoleplayChat.ToggleLOOC
+{
+	type = boolean, default = false,
+	page = RoleplayChat, translation = ToggleLOOC,
+}
+option RoleplayChat.ToggleNameChange
+{
+	type = boolean, default = false,
+	page = RoleplayChat, translation = ToggleNameChange,
+}
+option RoleplayChat.characterCustomization
+{
+	type = boolean, default = true,
+	page = RoleplayChat, translation = ToggleCustomization,
+}
+option RoleplayChat.ToggleEmoteBuff
+{
+	type = boolean, default = true,
+	page = RoleplayChat, translation = ToggleEmoteBuff,
+}
+option RoleplayChat.RadioAlert
+{
+	type = boolean, default = true,
+	page = RoleplayChat, translation = RadioAlert,
+}
+option RoleplayChat.sayRange
+{
+	type = integer, min = 1, max = 32, default = 16,
+	page = RoleplayChat, translation = sayRange,
+}
+option RoleplayChat.lowRange
+{
+	type = integer, min = 1, max = 16, default = 4,
+	page = RoleplayChat, translation = lowRange,
+}
+option RoleplayChat.meRange
+{
+	type = integer, min = 1, max = 32, default = 20,
+	page = RoleplayChat, translation = meRange,
+}
+option RoleplayChat.meLongRange
+{
+	type = integer, min = 1, max = 64, default = 48,
+	page = RoleplayChat, translation = meLongRange,
+}
+option RoleplayChat.whisperRange
+{
+	type = integer, min = 1, max = 2, default = 2,
+	page = RoleplayChat, translation = whisperRange,
+}
+option RoleplayChat.shoutRange
+{
+	type = integer, min = 1, max = 64, default = 48,
+	page = RoleplayChat, translation = shoutRange,
+}
