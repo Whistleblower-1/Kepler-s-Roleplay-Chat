@@ -1,0 +1,10 @@
+name=Roleplay Chat (B42.13 Updated)
+poster=poster.png
+id=roleplaychat_b42
+description=A roleplay chat mod for Project Zomboid B42.13+.
+description=Commands: /me, /melong, /melow, /do, /dolong, /name, /low, /whisper, /whisperme
+description=Updated for Build 42.13 registry system compatibility.
+description=Based on buffy's roleplay chat mod.
+url=github.com/buffyuwu/PZ-roleplaychat
+modversion=4.1
+pzversion=42.13
